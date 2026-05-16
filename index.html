@@ -24,21 +24,24 @@
             background-color: #000000;
             color: #ffffff;
             text-align: center;
-            padding: 30px 20px;
+            padding: 25px 20px;
         }
 
-        h1 {
-            font-size: 26px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-            text-transform: uppercase;
+        /* Style for the uploaded sign image */
+        .header-logo {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(255,255,255,0.1);
         }
 
         .location-count {
             font-size: 15px;
             color: #cccccc;
             font-weight: 500;
+            letter-spacing: 0.5px;
         }
 
         /* --- Locations Section --- */
@@ -77,27 +80,43 @@
             gap: 5px;
         }
 
-        .location-card address {
+        /* Clickable addresses */
+        .location-card address a {
             font-style: normal;
             font-size: 16px;
             color: #333;
-            margin-bottom: 10px;
+            text-decoration: none;
             font-weight: 500;
+            display: block;
+            margin-bottom: 15px;
+        }
+        
+        .location-card address a:hover {
+            color: #a31d1d;
         }
 
-        .location-card a {
+        /* Button groups */
+        .button-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .location-card .btn {
             display: inline-block;
             color: #a31d1d;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: bold;
             border: 1px solid #a31d1d;
-            padding: 6px 15px;
+            padding: 8px 12px;
             border-radius: 4px;
             transition: all 0.2s ease;
+            flex: 1;
+            max-width: 150px;
         }
 
-        .location-card a:hover {
+        .location-card .btn:hover {
             background-color: #a31d1d;
             color: #ffffff;
         }
@@ -120,7 +139,7 @@
 <body>
 
     <header>
-        <h1>Los Inmortales</h1>
+        <img src="image.png" alt="Los Inmortales Taqueria" class="header-logo">
         <div class="location-count">5 Sacramento Locations</div>
     </header>
 
@@ -129,32 +148,67 @@
 
         <div class="location-card">
             <div class="city-tag">📍 SACRAMENTO</div>
-            <address>501 Broadway<br>Sacramento, CA 95818</address>
-            <a href="tel:9165538127">📞 (916) 553-8127</a>
+            <address>
+                <a href="https://maps.google.com/?q=501+Broadway+Sacramento+CA+95818" target="_blank">
+                    501 Broadway<br>Sacramento, CA 95818
+                </a>
+            </address>
+            <div class="button-group">
+                <a href="tel:9165538127" class="btn">📞 Call</a>
+                <a href="https://maps.google.com/?q=501+Broadway+Sacramento+CA+95818" target="_blank" class="btn">🗺️ Directions</a>
+            </div>
         </div>
 
         <div class="location-card">
             <div class="city-tag">📍 SACRAMENTO</div>
-            <address>3131 Fruitridge Rd<br>Sacramento, CA 95820</address>
-            <a href="tel:9164555505">📞 (916) 455-5505</a>
+            <address>
+                <a href="https://maps.google.com/?q=3131+Fruitridge+Rd+Sacramento+CA+95820" target="_blank">
+                    3131 Fruitridge Rd<br>Sacramento, CA 95820
+                </a>
+            </address>
+            <div class="button-group">
+                <a href="tel:9164555505" class="btn">📞 Call</a>
+                <a href="https://maps.google.com/?q=3131+Fruitridge+Rd+Sacramento+CA+95820" target="_blank" class="btn">🗺️ Directions</a>
+            </div>
         </div>
 
         <div class="location-card">
             <div class="city-tag">📍 SACRAMENTO</div>
-            <address>6670 Valley Hi Dr<br>Sacramento, CA 95823</address>
-            <a href="tel:9168852232">📞 (916) 885-2232</a>
+            <address>
+                <a href="https://maps.google.com/?q=6670+Valley+Hi+Dr+Sacramento+CA+95823" target="_blank">
+                    6670 Valley Hi Dr<br>Sacramento, CA 95823
+                </a>
+            </address>
+            <div class="button-group">
+                <a href="tel:9168852232" class="btn">📞 Call</a>
+                <a href="https://maps.google.com/?q=6670+Valley+Hi+Dr+Sacramento+CA+95823" target="_blank" class="btn">🗺️ Directions</a>
+            </div>
         </div>
 
         <div class="location-card">
             <div class="city-tag">📍 SACRAMENTO</div>
-            <address>2598 Alta Arden Expy<br>Sacramento, CA 95825</address>
-            <a href="tel:9168982778">📞 (916) 898-2778</a>
+            <address>
+                <a href="https://maps.google.com/?q=2598+Alta+Arden+Expy+Sacramento+CA+95825" target="_blank">
+                    2598 Alta Arden Expy<br>Sacramento, CA 95825
+                </a>
+            </address>
+            <div class="button-group">
+                <a href="tel:9168982778" class="btn">📞 Call</a>
+                <a href="https://maps.google.com/?q=2598+Alta+Arden+Expy+Sacramento+CA+95825" target="_blank" class="btn">🗺️ Directions</a>
+            </div>
         </div>
 
         <div class="location-card">
             <div class="city-tag">📍 SACRAMENTO</div>
-            <address>3551 Truxel Rd Suite 1<br>Sacramento, CA 95834</address>
-            <a href="tel:9165835109">📞 (916) 583-5109</a>
+            <address>
+                <a href="https://maps.google.com/?q=3551+Truxel+Rd+Suite+1+Sacramento+CA+95834" target="_blank">
+                    3551 Truxel Rd Suite 1<br>Sacramento, CA 95834
+                </a>
+            </address>
+            <div class="button-group">
+                <a href="tel:9165835109" class="btn">📞 Call</a>
+                <a href="https://maps.google.com/?q=3551+Truxel+Rd+Suite+1+Sacramento+CA+95834" target="_blank" class="btn">🗺️ Directions</a>
+            </div>
         </div>
     </section>
 
@@ -166,6 +220,7 @@
 
 </body>
 </html>
+
 
 
 
