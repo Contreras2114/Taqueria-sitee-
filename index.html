@@ -1,38 +1,171 @@
-        <!-- Location 1: Broadway -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Inmortales Taqueria - Locations</title>
+    <style>
+        /* --- Reset & Base Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        /* --- Header Section --- */
+        header {
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .location-count {
+            font-size: 15px;
+            color: #cccccc;
+            font-weight: 500;
+        }
+
+        /* --- Locations Section --- */
+        .locations-section {
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .divider {
+            width: 50px;
+            height: 2px;
+            background-color: #a31d1d;
+            margin: 0 auto 25px auto;
+        }
+
+        .location-card {
+            border: 1px solid #e0e0e0;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            background-color: #fafafa;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .location-card .city-tag {
+            color: #a31d1d;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .location-card address {
+            font-style: normal;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .location-card a {
+            display: inline-block;
+            color: #a31d1d;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            border: 1px solid #a31d1d;
+            padding: 6px 15px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .location-card a:hover {
+            background-color: #a31d1d;
+            color: #ffffff;
+        }
+
+        /* --- Footer Section --- */
+        footer {
+            background-color: #22252a;
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 13px;
+            margin-top: 40px;
+        }
+
+        .copyright {
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Los Inmortales</h1>
+        <div class="location-count">5 Sacramento Locations</div>
+    </header>
+
+    <section class="locations-section">
+        <div class="divider"></div>
+
         <div class="location-card">
-            <h3>📍 SACRAMENTO</h3>
-            <p>501 Broadway<br>Sacramento, CA 95818</p>
-            <p><a href="tel:9165538127">📞 (916) 553-8127</a></p>
+            <div class="city-tag">📍 SACRAMENTO</div>
+            <address>501 Broadway<br>Sacramento, CA 95818</address>
+            <a href="tel:9165538127">📞 (916) 553-8127</a>
         </div>
 
-        <!-- Location 2: Fruitridge -->
         <div class="location-card">
-            <h3>📍 SACRAMENTO</h3>
-            <p>3131 Fruitridge Rd<br>Sacramento, CA 95820</p>
-            <p><a href="tel:9164555505">📞 (916) 455-5505</a></p>
+            <div class="city-tag">📍 SACRAMENTO</div>
+            <address>3131 Fruitridge Rd<br>Sacramento, CA 95820</address>
+            <a href="tel:9164555505">📞 (916) 455-5505</a>
         </div>
 
-        <!-- Location 3: Valley Hi -->
         <div class="location-card">
-            <h3>📍 SACRAMENTO</h3>
-            <p>6670 Valley Hi Dr<br>Sacramento, CA 95823</p>
-            <p><a href="tel:9168852232">📞 (916) 885-2232</a></p>
+            <div class="city-tag">📍 SACRAMENTO</div>
+            <address>6670 Valley Hi Dr<br>Sacramento, CA 95823</address>
+            <a href="tel:9168852232">📞 (916) 885-2232</a>
         </div>
 
-        <!-- Location 4: Alta Arden -->
         <div class="location-card">
-            <h3>📍 SACRAMENTO</h3>
-            <p>2598 Alta Arden Expy<br>Sacramento, CA 95825</p>
-            <p><a href="tel:9168982778">📞 (916) 898-2778</a></p>
+            <div class="city-tag">📍 SACRAMENTO</div>
+            <address>2598 Alta Arden Expy<br>Sacramento, CA 95825</address>
+            <a href="tel:9168982778">📞 (916) 898-2778</a>
         </div>
 
-        <!-- Location 5: Truxel -->
         <div class="location-card">
-            <h3>📍 SACRAMENTO</h3>
-            <p>3551 Truxel Rd Suite 1<br>Sacramento, CA 95834</p>
-            <p><a href="tel:9165835109">📞 (916) 583-5109</a></p>
+            <div class="city-tag">📍 SACRAMENTO</div>
+            <address>3551 Truxel Rd Suite 1<br>Sacramento, CA 95834</address>
+            <a href="tel:9165835109">📞 (916) 583-5109</a>
         </div>
+    </section>
 
+    <footer>
+        <div class="copyright">
+            Copyright © Los Inmortales Taqueria 2026
+        </div>
+    </footer>
+
+</body>
+</html>
 
 
 
