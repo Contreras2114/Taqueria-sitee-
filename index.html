@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Los Inmortales Taqueria</title>
+    <title>Los Inmortales Taqueria - Locations</title>
     <style>
         /* --- Reset & Base Styles --- */
         * {
@@ -24,138 +24,53 @@
             background-color: #000000;
             color: #ffffff;
             text-align: center;
-            padding: 40px 20px;
-            position: relative;
+            padding: 30px 20px;
         }
 
-        .menu-icon {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        .logo-placeholder {
-            width: 120px;
-            height: 120px;
-            background-color: #222;
-            border-radius: 50%;
-            margin: 0 auto 20px auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
+        h1 {
+            font-size: 26px;
             font-weight: bold;
-            border: 2px solid #333;
-            color: #ff3333;
-            text-transform: uppercase;
             letter-spacing: 1px;
-        }
-
-        .btn-order {
-            display: inline-block;
-            background-color: #a31d1d;
-            color: #ffffff;
-            padding: 12px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 4px;
-            margin-bottom: 15px;
+            margin-bottom: 5px;
             text-transform: uppercase;
-            font-size: 14px;
-            transition: background 0.3s ease;
-        }
-
-        .btn-order:hover {
-            background-color: #cc2424;
         }
 
         .location-count {
-            font-size: 16px;
-            margin-bottom: 15px;
+            font-size: 15px;
+            color: #cccccc;
             font-weight: 500;
-        }
-
-        .social-icons a {
-            color: #ffffff;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 18px;
-        }
-
-        /* --- Welcome Section --- */
-        .welcome-section {
-            text-align: center;
-            padding: 50px 20px 30px 20px;
-        }
-
-        .welcome-section h1 {
-            font-size: 28px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .divider {
-            width: 50px;
-            height: 2px;
-            background-color: #333;
-            margin: 0 auto 15px auto;
-        }
-
-        .welcome-section p {
-            font-size: 16px;
-            color: #666;
-            font-style: italic;
-        }
-
-        /* --- Image Gallery --- */
-        .image-gallery {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .food-img-placeholder {
-            width: 100%;
-            height: 250px;
-            background-color: #f0f0f0;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #888;
-            font-size: 14px;
-            border-radius: 4px;
-            border: 1px solid #ddd;
         }
 
         /* --- Locations Section --- */
         .locations-section {
             text-align: center;
-            padding: 50px 20px;
+            padding: 40px 20px;
             max-width: 500px;
             margin: 0 auto;
         }
 
-        .locations-section h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
+        .divider {
+            width: 50px;
+            height: 2px;
+            background-color: #a31d1d;
+            margin: 0 auto 25px auto;
         }
 
         .location-card {
-            border: 1px solid #cccccc;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-radius: 4px;
+            border: 1px solid #e0e0e0;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 6px;
             background-color: #fafafa;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
         }
 
         .location-card .city-tag {
+            color: #a31d1d;
             font-size: 12px;
             font-weight: bold;
             letter-spacing: 1px;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -164,15 +79,27 @@
 
         .location-card address {
             font-style: normal;
-            font-size: 15px;
+            font-size: 16px;
             color: #333;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
+            font-weight: 500;
         }
 
         .location-card a {
-            color: #333;
-            text-decoration: underline;
-            font-size: 14px;
+            display: inline-block;
+            color: #a31d1d;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            border: 1px solid #a31d1d;
+            padding: 6px 15px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .location-card a:hover {
+            background-color: #a31d1d;
+            color: #ffffff;
         }
 
         /* --- Footer Section --- */
@@ -180,227 +107,58 @@
             background-color: #22252a;
             color: #ffffff;
             text-align: center;
-            padding: 60px 20px 40px 20px;
-            font-size: 14px;
-        }
-
-        footer .logo-placeholder {
-            width: 60px;
-            height: 60px;
-            font-size: 8px;
-            margin-bottom: 20px;
-        }
-
-        footer .btn-order {
-            background-color: transparent;
-            border: 1px solid #ffffff;
-            padding: 10px 25px;
-            margin-bottom: 40px;
-        }
-        
-        footer .btn-order:hover {
-            background-color: #ffffff;
-            color: #22252a;
-        }
-
-        .footer-heading {
-            font-size: 16px;
-            letter-spacing: 1px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            margin-top: 40px;
-            text-transform: uppercase;
-            color: #ffffff;
-        }
-
-        .hours-block, .contact-block {
-            margin-bottom: 35px;
-        }
-
-        .hours-block h4, .contact-block h4 {
-            font-size: 14px;
-            font-weight: bold;
-            margin-bottom: 8px;
-            color: #eaeaea;
-        }
-
-        .hours-block p, .contact-block p {
-            color: #b0b3b8;
+            padding: 30px 20px;
             font-size: 13px;
-            margin-bottom: 4px;
-        }
-
-        .footer-socials {
             margin-top: 40px;
-            margin-bottom: 20px;
-        }
-
-        .footer-socials a {
-            color: #ffffff;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 20px;
         }
 
         .copyright {
-            font-size: 11px;
-            color: #666;
-            margin-top: 30px;
+            color: #999;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="menu-icon">☰</div>
-        <div class="logo-placeholder">Taqueria Logo</div>
-        <div>
-            <a href="#" class="btn-order">Order Online</a>
-        </div>
-        <div class="location-count">5 locations</div>
-        <div class="social-icons">
-            <a href="#"> Facebook </a> | <a href="#"> Twitter </a> | <a href="#"> Instagram </a>
-        </div>
+        <h1>Los Inmortales</h1>
+        <div class="location-count">5 Sacramento Locations</div>
     </header>
 
-    <section class="welcome-section">
-        <h1>Welcome to Los Inmortales</h1>
-        <div class="divider"></div>
-        <p>Mexican restaurant</p>
-    </section>
-
-    <section class="image-gallery">
-        <div class="food-img-placeholder">[ Food Dish Photo 1 ]</div>
-        <div class="food-img-placeholder">[ Food Dish Photo 2 ]</div>
-        <div class="food-img-placeholder">[ Food Dish Photo 3 ]</div>
-    </section>
-
     <section class="locations-section">
-        <h2>Los Inmortales locations</h2>
         <div class="divider"></div>
 
         <div class="location-card">
             <div class="city-tag">📍 SACRAMENTO</div>
             <address>501 Broadway<br>Sacramento, CA 95818</address>
-            <a href="tel:9162525271">(916) 252-5271</a>
+            <a href="tel:9162525271">📞 (916) 252-5271</a>
         </div>
 
         <div class="location-card">
             <div class="city-tag">📍 SACRAMENTO</div>
             <address>2101 Fruitridge Rd<br>Sacramento, CA 95822</address>
-            <a href="tel:9164555503">(916) 455-5503</a>
+            <a href="tel:9164555503">📞 (916) 455-5503</a>
         </div>
 
         <div class="location-card">
             <div class="city-tag">📍 SACRAMENTO</div>
             <address>6670 Valley Hi Dr<br>Sacramento, CA 95823</address>
-            <a href="tel:9163932232">(916) 393-2232</a>
+            <a href="tel:9163932232">📞 (916) 393-2232</a>
         </div>
 
         <div class="location-card">
             <div class="city-tag">📍 SACRAMENTO</div>
             <address>2356 Alta Arden Expy<br>Sacramento, CA 95825</address>
-            <a href="tel:9169224252">(916) 922-4252</a>
+            <a href="tel:9169224252">📞 (916) 922-4252</a>
         </div>
 
         <div class="location-card">
             <div class="city-tag">📍 SACRAMENTO</div>
             <address>3551 Truxel Rd Suite 1<br>Sacramento, CA 95834</address>
-            <a href="tel:9165650159">(916) 565-0159</a>
+            <a href="tel:9165650159">📞 (916) 565-0159</a>
         </div>
     </section>
 
     <footer>
-        <div class="logo-placeholder" style="margin: 0 auto 20px auto;">Logo</div>
-        <div>
-            <a href="#" class="btn-order">Order Online</a>
-        </div>
-
-        <div class="footer-heading">Business Hours</div>
-        
-        <div class="hours-block">
-            <h4>501 Broadway</h4>
-            <p>Sun 9:00 am - 10:00 pm</p>
-            <p>Mon 9:00 am - 10:00 pm</p>
-            <p>Tue 9:00 am - 10:00 pm</p>
-            <p>Wed 9:00 am - 10:00 pm</p>
-            <p>Thu 9:00 am - 10:00 pm</p>
-            <p>Fri 9:00 am - 10:00 pm</p>
-            <p>Sat 9:00 am - 10:00 pm</p>
-        </div>
-
-        <div class="hours-block">
-            <h4>2101 Fruitridge Rd</h4>
-            <p>Sun 9:00 am - 10:00 pm</p>
-            <p>Mon 9:00 am - 10:00 pm</p>
-            <p>Tue 9:00 am - 10:00 pm</p>
-            <p>Wed 9:00 am - 10:00 pm</p>
-            <p>Thu 9:00 am - 10:00 pm</p>
-            <p>Fri 9:00 am - 10:00 pm</p>
-            <p>Sat 9:00 am - 10:00 pm</p>
-        </div>
-
-        <div class="hours-block">
-            <h4>6670 Valley Hi Dr</h4>
-            <p>Sun 9:00 am - 10:00 pm</p>
-            <p>Mon 9:00 am - 11:00 pm</p>
-            <p>Tue 9:00 am - 11:00 pm</p>
-            <p>Wed 9:00 am - 11:00 pm</p>
-            <p>Thu 9:00 am - 11:00 pm</p>
-            <p>Fri 9:00 am - 11:00 pm</p>
-            <p>Sat 9:00 am - 11:00 pm</p>
-        </div>
-
-        <div class="hours-block">
-            <h4>2356 Alta Arden Expy</h4>
-            <p>Sun 9:00 am - 10:00 pm</p>
-            <p>Mon 9:00 am - 10:00 pm</p>
-            <p>Tue 9:00 am - 10:00 pm</p>
-            <p>Wed 9:00 am - 10:00 pm</p>
-            <p>Thu 9:00 am - 10:00 pm</p>
-            <p>Fri 9:00 am - 10:00 pm</p>
-            <p>Sat 9:00 am - 10:00 pm</p>
-        </div>
-
-        <div class="hours-block">
-            <h4>3551 Truxel Rd Suite 1</h4>
-            <p>Sun 9:00 am - 10:00 pm</p>
-            <p>Mon 9:00 am - 10:00 pm</p>
-            <p>Tue 9:00 am - 10:00 pm</p>
-            <p>Wed 9:00 am - 10:00 pm</p>
-            <p>Thu 9:00 am - 10:00 pm</p>
-            <p>Fri 9:00 am - 10:00 pm</p>
-            <p>Sat 9:00 am - 10:00 pm</p>
-        </div>
-
-        <div class="footer-heading">Contact Us</div>
-        
-        <div class="contact-block">
-            <p>501 Broadway, Sacramento, CA 95818</p>
-            <p>(916) 252-5271</p>
-        </div>
-        <div class="contact-block">
-            <p>2101 Fruitridge Rd, Sacramento, CA 95822</p>
-            <p>(916) 455-5503</p>
-        </div>
-        <div class="contact-block">
-            <p>6670 Valley Hi Dr, Sacramento, CA 95823</p>
-            <p>(916) 393-2232</p>
-        </div>
-        <div class="contact-block">
-            <p>2356 Alta Arden Expy, Sacramento, CA 95825</p>
-            <p>(916) 922-4252</p>
-        </div>
-        <div class="contact-block">
-            <p>3551 Truxel Rd Suite 1, Sacramento, CA 95834</p>
-            <p>(916) 565-0159</p>
-        </div>
-
-        <div class="footer-heading">Social Media</div>
-        <div class="footer-socials">
-            <a href="#">FB</a> | <a href="#">TW</a> | <a href="#">IG</a>
-        </div>
-
         <div class="copyright">
             Copyright © Los Inmortales Taqueria 2026
         </div>
@@ -408,4 +166,5 @@
 
 </body>
 </html>
+
 
